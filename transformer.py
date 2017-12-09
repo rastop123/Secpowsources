@@ -79,10 +79,6 @@ class Transformer:
         self.r_om_31 = 0
         self.r_om_32 = 0
 
-
-
-
-
     def overpower(self):
         if self.schema in ("а", "б"):
             self.sec_power = (self.U_21 * self.I_21) + 2 * (self.U_31 * self.I_31 + self.U_31 * self.I_31)
