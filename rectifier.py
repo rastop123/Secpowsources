@@ -8,6 +8,7 @@ class Rectifier:
     K_l = 0.005
     s = 1 # Спросить у преподователя
     p = 2
+    K_p1 = 0.05
 
     def __init__(self, **kwargs):
         self.r_tr = float(kwargs["r_tr"])
@@ -47,10 +48,12 @@ class Rectifier:
         self.I_2 = (self.D * self.I_0) / 1.42
         self.I1w1_I0w2 = self.D / 1.42
         self.S_tr = 1.5 * self.I_0 * self.U_0
-        self.K_p1 = 2 * self.f_c
+        self.f_p1 = 2 * self.f_c
         self.S_2 = (self.B * self.D * self.I_0 * self.U_0) / 1.42
         self.S_1 = (self.B * self.D * self.I_0 * self.U_0) / 1.42
         self.C_1 = (100 * self.H_02) / (self.r * self.f_c * self.K_p1)
+        print('Емкость расчетная равна:', self.C_1)
+        self.C_1t = float(input('Введите емкость по приложению 4:'))
 
 
     def get_value_json(self, n, a, f):
