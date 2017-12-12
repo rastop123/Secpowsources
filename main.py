@@ -1,8 +1,4 @@
 #import math
-from PyQt5 import QtCore, QtGui
-from transformer import *
-
-
 
 dict_value = {}
 dict_value['U_c'] = input("Введите Uc:")
