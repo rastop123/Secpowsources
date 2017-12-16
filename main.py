@@ -1,4 +1,5 @@
 #import math
+import transformer
 
 dict_value = {}
 dict_value['U_c'] = input("Введите Uc:")
