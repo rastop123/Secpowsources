@@ -14,4 +14,8 @@ dict_value['typesize'] = input("Введите typesize:")
 dict_value['steelgrade'] = input("Введите steelgrade:")
 t = Transformer(**dict_value)
 result = t.calculate_all_value()
-print(result)
+for k in result.items():
+    line = str(k[0]) + ' ' + str(k[1]) + "\n"
+    file = open('/home/rastop/pyproject/replacer/value.txt', 'a')
+    file.write(line)
+    file.close()

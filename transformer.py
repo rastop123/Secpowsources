@@ -10,6 +10,7 @@ class Transformer:
     B_m_from_P2 = ((0, 1.5), (40, 1.5), (60, 1.6), (2000, 1.7))
     U_diff_from_P2 = ((25, 0.12), (50, 0.11), (100, 0.09), (150, 0.072), (200, 0.06), (250, 0.055), (300, 0.05), (2000, 0.042))
     k_c = float('0.93')
+    sigma_0 = 0.25
 
     def __init__(self, **kwargs):
         self.U_c = float(kwargs["U_c"])
@@ -132,7 +133,7 @@ class Transformer:
         self.G_c = m / 1000
         self.lw_sr = float(input("Введите lw_sr: "))
         self.h_table = float(input("Введите h_table: "))
-        self.sigma_0 = float(input("Введите Сигму 0:"))
+        #self.sigma_0 = float(input("Введите Сигму 0:"))
         self.a_table = float(input("ВВедите а:"))
         self.b_table = float(input("ВВедите b:"))
 

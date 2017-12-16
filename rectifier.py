@@ -55,6 +55,39 @@ class Rectifier:
         print('Емкость расчетная равна:', self.C_1)
         self.C_1t = float(input('Введите емкость по приложению 4:'))
 
+    def get_result_value(self):
+        self.get_VD_params()
+        self.get_r()
+        self.get_parrams()
+        self.get_value_rect()
+        d = {}
+        d['u_VDobrm'] = self.u_VDobrm
+        d['u_VDpr'] = self.u_VDpr
+        d['i_VDprm'] = self.i_VDprm
+        d['nameVD'] = self.nameVD
+        d['r_pr'] = self.r_pr
+        d['r'] = self.r
+        d['A'] = self.A
+        d['B'] = self.B
+        d['D'] = self.D
+        d['F'] = self.F
+        d['fi'] = self.fi
+        d['L_s'] = self.L_s
+        d['H_02'] = self.H_02
+        d['U_2'] = self.U_2
+        d['U_obrm'] = self.U_obrm
+        d['I_prsr'] = self.I_prsr
+        d['I_prm'] = self.I_prm
+        d['I_prVD'] = self.I_prVD
+        d['I_2'] = self.I_2
+        d['I1w1_I0w2'] = self.I1w1_I0w2
+        d['S_tr'] = self.S_tr
+        d['f_p1'] = self.f_p1
+        d['S_2'] = self.S_2
+        d['S_1'] = self.S_1
+        d['C_1'] = self.C_1
+        d['C_1t'] = self.C_1t
+        return d
 
     def get_value_json(self, n, a, f):
         file = open('graphs.json', 'r')
