@@ -153,8 +153,8 @@ class Transformer:
             self.w_22 = self.w_0 * self.U_22 * (1 - 0.5 * self.U_diff)
 
     def get_P_c(self):
-        P_yd = self.get_value_of_graph(self.B_m, *self.P_yd_from_B_m)
-        self.P_c = P_yd * self.G_c
+        self.P_yd = self.get_value_of_graph(self.B_m, *self.P_yd_from_B_m)
+        self.P_c = self.P_yd * self.G_c
 
     def get_I_xx(self):
         self.H_m = self.get_value_of_graph(self.B_m, *self.H_from_B_m)
@@ -509,4 +509,24 @@ class Transformer:
         d['p_loss_32'] = round(self.p_loss_32, 2)
         d['p_loss'] = round(self.p_loss, 2)
         d['real_kpd'] = round(self.real_kpd, 2)
+        d['sigma_0'] = round(self.sigma_0, 2)
+        d['S_c'] = round(self.S_c, 2)
+        d['V_c'] = round(self.V_c, 2)
+        d['l_sr'] = round(self.l_sr, 2)
+        d['G_c'] = round(self.G_c, 2)
+        d['lw_sr'] = round(self.lw_sr, 2)
+        d['h'] = round(self.h_table, 2)
+        d['a'] = round(self.a_table, 2)
+        d['b'] = round(self.b_table, 2)
+        d['P_yd'] = round(self.P_yd, 2)
+        d['d_11'] = round(self.d_11, 2)
+        d['d_11i'] = round(self.d_11_i, 2)
+        d['d_21'] = round(self.d_21, 2)
+        d['d_21i'] = round(self.d_21_i, 2)
+        d['d_22'] = round(self.d_22, 2)
+        d['d_22i'] = round(self.d_22_i, 2)
+        d['d_31'] = round(self.d_31, 2)
+        d['d_31i'] = round(self.d_31_i, 2)
+        d['d_32'] = round(self.d_32, 2)
+        d['d_32i'] = round(self.d_32_i, 2)
         return d

@@ -4,9 +4,10 @@ class stabilizer:
 
     u_kevt2min = 2
     u_rzash = 0.6
-    kp1 = None # у преподавателя узнать
+    kp1 = 0.05 # у преподавателя узнать
     r_0 = 2.5
     fc = 50
+    diff_u_ismin = 2
 
     def __init__(self, **kwargs):
         self.u_in = float(kwargs['u_in'])
